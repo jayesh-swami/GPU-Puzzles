@@ -13,3 +13,6 @@
             std::exit(1);                                               \
         }                                                               \
     } while (0)
+
+#define H2D(a, b, c) hipMemcpy(a, b, c, hipMemcpyHostToDevice)
+#define D2H(a, b, c) hipMemcpy(a, b, c, hipMemcpyDeviceToHost)
